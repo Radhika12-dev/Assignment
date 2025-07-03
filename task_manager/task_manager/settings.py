@@ -138,8 +138,8 @@ REST_FRAMEWORK = {
         'rest_framework.throttling.AnonRateThrottle',
     ],
     'DEFAULT_THROTTLE_RATES': {
-        'user': '100/minute',    # Authenticated users: 10 requests per minute
-        'anon': '50/minute',     # Unauthenticated users: 5 requests per minute
+        'user': '10/minute',    # Authenticated users: 10 requests per minute
+        'anon': '5/minute',     # Unauthenticated users: 5 requests per minute
     }
 }
 

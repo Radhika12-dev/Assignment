@@ -125,7 +125,7 @@ if st.session_state['token']:
 
             if update_response.status_code == 200:
                 st.success(f"Task '{selected_task['title']}' marked as completed!")
-                st.experimental_rerun()
+                
             else:
                 st.error("Failed to update task.")
 
@@ -134,6 +134,6 @@ if st.session_state['token']:
 
             if delete_response.status_code == 204:
                 st.success(f"Task '{selected_task['title']}' deleted successfully!")
-                st.experimental_rerun()
+                
             else:
                 st.error("Failed to delete task.")
