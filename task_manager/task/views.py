@@ -33,7 +33,6 @@ class TaskListCreateAPIView(APIView):
     
     def post(self,request):
         serializer = TaskSerializer(data = request.data)
-        print(serializer.initial_data)
         if serializer.is_valid():
             task = serializer.save(user=request.user) 
             response_serializer = TaskSerializer(task)
